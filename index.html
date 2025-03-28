@@ -11,10 +11,10 @@
 </head>
 <body>
 
-
     <main>
         <div class="choice-container">
-        <button class="choice">Wybierz dzień tygodnia</button>
+        <button class="choice-btn">Wybierz dzień tygodnia</button>
+        <button class="return-btn">Powrót</button>
         </div>
 
         <div class="days-container">
@@ -23,14 +23,12 @@
                 <hr>
                 <div class="monday-input-zone">
                     <ul class="days-list-style monday-list" id="monday-list">
-                        <li>1</li>
-                        <li>2</li>
-                        <li>3</li>
                     </ul>
                     <div class="input-container monday-input-container">
                         <input type="text" class="text-input-task monday-task-input">
                         <button class="button-add-task monday-task-adder input-remove-buttons">Dodaj Zadanie</button>
                         <button class="button-remove-task monday-task-remover input-remove-buttons">Usuń ostatnie zadanie</button>
+                        <button class="button-clear-tasks monday-alltasks-remover input-remove-buttons">Usuń zaznaczone zadania</button>
                     </div>
                 </div>
             </div>
@@ -38,87 +36,79 @@
                 <h3 class="days-title-style tuesday-title">Wtorek</h3>
                 <hr>
                 <ul class="days-list-style tuesday-list" id="tuesday-list">
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
                 </ul>
                 <div class="input-container tuesday-input-container">
                     <input type="text" class="text-input-task tuesday-task-input">
                     <button class="button-add-task tuesday-task-adder input-remove-buttons">Dodaj Zadanie</button>
                     <button class="button-remove-task tuesday-task-remover input-remove-buttons">Usuń ostatnie zadanie</button>
+                    <button class="button-clear-tasks tuesday-alltasks-remover input-remove-buttons">Usuń wszystkie zadania</button>
                 </div>
             </div>
             <div class="days-style wednsday">
                 <h3 class="days-title-style wednesday-title">Środa</h3>
                 <hr>
-                <ul class="days-list-style wednesdaylist" id="wednesday-list">
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
+                <ul class="days-list-style wednesday-list" id="wednesday-list">
                 </ul>
                 <div class="input-container wednesday-input-container">
                     <input type="text" class="text-input-task wednesday-task-input">
                     <button class="button-add-task wednesday-task-adder input-remove-buttons">Dodaj Zadanie</button>
                     <button class="button-remove-task wednesday-task-remover input-remove-buttons">Usuń ostatnie zadanie</button>
+                    <button class="button-clear-tasks wednesday-alltasks-remover input-remove-buttons">Usuń zaznaczone zadania</button>
                 </div>
             </div>
             <div class="days-style thursday">
                 <h3 class="days-title-style thursday-title">Czwartek</h3>
                 <hr>
                 <ul class="days-list-style thursday-list" id="thursday-list">
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
                 </ul>
                 <div class="input-container thursday-input-container">
                     <input type="text" class="text-input-task thursday-task-input">
                     <button class="button-add-task thursday-task-adder input-remove-buttons">Dodaj Zadanie</button>
                     <button class="button-remove-task thursday-task-remover input-remove-buttons">Usuń ostatnie zadanie</button>
+                    <button class="button-clear-tasks thursday-alltasks-remover input-remove-buttons">Usuń zaznaczone zadania</button>
                 </div>
             </div>
             <div class="days-style friday">
                 <h3 class="days-title-style friday-title">Piątek</h3>
                 <hr>
                 <ul class="days-list-style friday-list" id="friday-list">
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
                 </ul>
                 <div class="input-container friday-input-container">
                     <input type="text" class="text-input-task friday-task-input">
                     <button class="button-add-task friday-task-adder input-remove-buttons">Dodaj Zadanie</button>
                     <button class="button-remove-task friday-task-remover input-remove-buttons">Usuń ostatnie zadanie</button>
+                    <button class="button-clear-tasks friday-alltasks-remover input-remove-buttons">Usuń zaznaczone zadania</button>
                 </div>
             </div>
             <div class="days-style saturday">
                 <h3 class="days-title-style saturday-title">Sobota</h3>
                 <hr>
                 <ul class="days-list-style saturday-list" id="saturday-list">
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
                 </ul>
                 <div class="input-container saturday-input-container">
                     <input type="text" class="text-input-task saturday-task-input">
                     <button class="button-add-task saturday-task-adder input-remove-buttons">Dodaj Zadanie</button>
                     <button class="button-remove-task saturday-task-remover input-remove-buttons">Usuń ostatnie zadanie</button>
+                    <button class="button-clear-tasks saturday-alltasks-remover input-remove-buttons">Usuń zaznaczone zadania</button>
                 </div>
             </div>
             <div class="days-style sunday">
                 <h3 class="days-title-style sunday-title">Niedziela</h3>
                 <hr>
                 <ul class="days-list-style sunday-list" id="sunday-list">
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
                 </ul>
                 <div class="input-container sunday-input-container">
                     <input type="text" class="text-input-task sunday-task-input">
                     <button class="button-add-task sunday-task-adder input-remove-buttons">Dodaj Zadanie</button>
                     <button class="button-remove-task sunday-task-remover input-remove-buttons">Usuń ostatnie zadanie</button>
+                    <button class="button-clear-tasks sunday-alltasks-remover input-remove-buttons">Usuń zaznaczone zadania</button>
                 </div>
             </div>
         </div>
+<!-- 
+        <div class="reset-localstorage-zone">
+            <button class="reset-btn"></button>
+        </div> -->
     </main>
     
 
@@ -126,5 +116,9 @@
 
 
     <script src="./scripts/main.js"></script>
+    <script src="./scripts/loadLocalTasks.js"></script>
+    <script src="./scripts/animations-btn.js"></script>
+    <script src="./scripts/animations-loadCards.js"></script>
+    <script src="./scripts/deleteSystem.js"></script>
 </body>
 </html>

@@ -6,6 +6,7 @@
 
 body{
     height: 100vh;
+    width: 100vw;
     background-color: rgb(51, 51, 51);
 }
 
@@ -17,9 +18,11 @@ body{
     align-items: center;
 }
 
-.choice{
+.choice-btn{
     position: relative;
-    margin: 5%;
+    top: 300px;
+    z-index: 10;
+    margin: 3%;
     padding: 30px 60px;
     border: none;
     border-radius: 15px;
@@ -31,36 +34,95 @@ body{
     cursor: pointer;
     transition: 
     box-shadow 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), 
-    background-color 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    background-color 0.3s cubic-bezier(0.165, 0.84, 0.44, 1),
+    top 1.8s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.choice:hover{
+.choice-btn:hover{
     box-shadow: 0 0 10px rgb(210, 200, 0);
     background-color: rgba(220,215, 0, 0.5);
 }
 
-.days-container{
-    display: flex;
-    justify-content: space-around;
+
+.return-btn{
+    position: relative;
+    z-index: 10;
+    display: none;
+    transform: scale(0);
+    padding: 30px 60px;
+    border: none;
+    margin: 3%;
+    border-radius: 15px;
+    color: rgb(255, 215, 0);
+    background-color: rgba(30, 30, 30, 0.5);
+    font-family: "Quicksand", sans-serif;
+    user-select: none;
+    font-size: 150%;
+    cursor: pointer;
+    transition: 
+    box-shadow 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), 
+    background-color 0.3s cubic-bezier(0.165, 0.84, 0.44, 1),
+    transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
+
+.return-btn:hover{
+    box-shadow: 0 0 10px rgb(210, 200, 0);
+    background-color: rgba(220,215, 0, 0.5);
+    z-index: 11;
+}
+
+
+.days-container{
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+
+
+.non-clicked *{
+    pointer-events: none;
+}
+
 
 .days-style{
     position: relative;
+    z-index: 10;
     background-color: rgb(63, 61, 61);
+    min-height: 400px;
+    opacity: 0;
     padding: 0 20px 20px 20px;
-    margin: 0 10px 0 10px;
+    margin: 5px;
     border-radius: 20px;
+    pointer-events: none;
     /* cursor: pointer; */
     transition: 
-        box-shadow 0.3s cubic-bezier(0.165, 0.84, 0.44, 1),
-        background-color 0.3s cubic-bezier(0.165, 0.84, 0.44, 1),
-        transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-} 
+    box-shadow 0.3s cubic-bezier(0.165, 0.84, 0.44, 1),
+    background-color 0.3s cubic-bezier(0.165, 0.84, 0.44, 1),
+    transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1),
+    opacity 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+
+
+/* .show-days-style{
+    opacity: 1;
+
+} */
+
+.choosed-card{
+    transform: scale(1.1);
+    transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
 
 .days-style:hover{
     box-shadow: 0 0 15px rgba(220,215, 0, 0.5);
     background-color: rgba(63 61 61 / 0.1);
     transform: scale(1.05);
+    z-index: 11;
 }
 
 
@@ -95,6 +157,12 @@ body{
     border-radius: 15px;
     user-select: none;
 }
+
+.days-list-style li:hover{
+    background-color: red;
+}
+
+
 
 .input-container{
     display: flex;
@@ -139,7 +207,32 @@ body{
     transform: scale(1.05);
 }
 
+.claimed-day{
+    transform: scale(1.05);
+}
 
 
+.reset-btn{
+    position: relative;
+    top: 300px;
+    z-index: 10;
+    margin: 3%;
+    padding: 30px 60px;
+    border: none;
+    border-radius: 15px;
+    color: rgb(255, 215, 0);
+    background-color: rgba(30, 30, 30, 0.5);
+    font-family: "Quicksand", sans-serif;
+    user-select: none;
+    font-size: 150%;
+    cursor: pointer;
+    transition: 
+    box-shadow 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), 
+    background-color 0.3s cubic-bezier(0.165, 0.84, 0.44, 1),
+    top 1.8s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
 
-
+.button-clear-tasks{
+    visibility: visible;
+}
